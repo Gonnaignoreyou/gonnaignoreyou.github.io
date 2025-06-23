@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Jamal Nasir</title>
+
+  <!-- Google Fonts for a clean/modern + regal pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Regal palette */
+      --regal-green: #013220;
+      --gold: #d4af37;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--regal-green);
+      color: var(--gold);
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .card {
+      max-width: 480px;
+      width: 100%;
+      border: 2px solid var(--gold);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25);
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: .5rem;
+      color: var(--gold);
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: .5px;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin: .5rem;
+      transition: transform .15s ease-in-out;
+    }
+    a:hover { transform: translateY(-2px); }
+
+    .button {
+      border: 2px solid var(--gold);
+      border-radius: 9999px; /* pill */
+      padding: .5rem 1.5rem;
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      font-size: .875rem;
+      color: rgba(212, 175, 55, .75);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Mohammad Jamal Nasir</h1>
+
+    <p><a href="mailto:hello@mjamalnasir.com" class="button">Email Me</a></p>
+
+    <p>
+      <a href="https://www.instagram.com/gonnaignoreyou" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a> |
+      <a href="https://www.linkedin.com/in/mjamalnasir/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    </p>
+
+    <p>
+      <a href="https://nasheman.mjamalnasir.com/index.php/apps/appointments/pub/VqcANQbGq2zcYrqw/form" target="_blank" rel="noopener" class="button">Book an Appointment</a>
+    </p>
+
+    <p>
+      <a href="http://ogy.de/sr35" target="_blank" rel="noopener" class="button">View Calendar</a>
+    </p>
+
+    <div class="footer">© <span id="yr"></span> Jamal</div>
+  </main>
+
+  <script>
+    // Auto‑update copyright year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
