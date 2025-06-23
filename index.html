@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohammad Jamal Nasir</title>
 
-  <!-- Google Fonts for a clean/modern + regal pairing -->
+  <!-- Google Fonts for a clean/modern + regal pairing -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
     body {
       background: var(--regal-green);
       color: var(--gold);
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,12 +42,16 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Playfair Display', serif;
       font-weight: 700;
-      font-size: 2rem;
+      /* Responsive clamp keeps it readable but prevents overflow on tiny screens */
+      font-size: clamp(1.75rem, 6.5vw, 2.25rem);
+      line-height: 1.2;
+      overflow-wrap: anywhere; /* force break if still too long */
       margin-bottom: .5rem;
       color: var(--gold);
     }
+
     h2 {
       font-size: 1.25rem;
       margin-bottom: 1.5rem;
@@ -79,9 +83,10 @@
 </head>
 <body>
   <main class="card">
-    <h1>Mohammad Jamal Nasir</h1>
+    <h1>Mohammad Jamal Nasir</h1>
+    <h2>Jamal</h2>
 
-    <p><a href="mailto:hello@mjamalnasir.com" class="button">Email Me</a></p>
+    <p><a href="mailto:hello@mjamalnasir.com" class="button">Email Me</a></p>
 
     <p>
       <a href="https://www.instagram.com/gonnaignoreyou" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a> |
@@ -89,18 +94,18 @@
     </p>
 
     <p>
-      <a href="https://nasheman.mjamalnasir.com/index.php/apps/appointments/pub/VqcANQbGq2zcYrqw/form" target="_blank" rel="noopener" class="button">Book an Appointment</a>
+      <a href="https://nasheman.mjamalnasir.com/index.php/apps/appointments/pub/VqcANQbGq2zcYrqw/form" target="_blank" rel="noopener" class="button">Book an Appointment</a>
     </p>
 
     <p>
-      <a href="http://ogy.de/sr35" target="_blank" rel="noopener" class="button">View Calendar</a>
+      <a href="http://ogy.de/sr35" target="_blank" rel="noopener" class="button">View Calendar</a>
     </p>
 
     <div class="footer">© <span id="yr"></span> Jamal</div>
   </main>
 
   <script>
-    // Auto‑update copyright year
+    // Auto-update copyright year
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
